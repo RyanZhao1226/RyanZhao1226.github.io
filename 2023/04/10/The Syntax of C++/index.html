@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>The Syntax in C++ | Ryan Zhao</title><meta name="author" content="Ryan Zhao"><meta name="copyright" content="Ryan Zhao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="The Syntax in C++In this article, we will explore the syntax of the C++ programming language in great detail. C++ is a widely-used, high-performance, statically-typed, multi-paradigm programming langu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Syntax in C++">
+<meta property="og:url" content="http://example.com/2023/04/10/The%20Syntax%20of%20C++/index.html">
+<meta property="og:site_name" content="Ryan Zhao">
+<meta property="og:description" content="The Syntax in C++In this article, we will explore the syntax of the C++ programming language in great detail. C++ is a widely-used, high-performance, statically-typed, multi-paradigm programming langu">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/avatar.JPG">
+<meta property="article:published_time" content="2023-04-10T12:36:54.548Z">
+<meta property="article:modified_time" content="2023-04-10T12:23:23.336Z">
+<meta property="article:author" content="Ryan Zhao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.JPG"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://example.com/2023/04/10/The%20Syntax%20of%20C++/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The Syntax in C++',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-04-10 20:23:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/background.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ryan Zhao"><img class="site-icon" src="/img/icon.png"/><span class="site-name">Ryan Zhao</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">The Syntax in C++</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-04-10T12:36:54.548Z" title="Created 2023-04-10 20:36:54">2023-04-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-04-10T12:23:23.336Z" title="Updated 2023-04-10 20:23:23">2023-04-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C/">C++</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="The Syntax in C++"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="The-Syntax-in-C"><a href="#The-Syntax-in-C" class="headerlink" title="The Syntax in C++"></a>The Syntax in C++</h1><p>In this article, we will explore the syntax of the C++ programming language in great detail. C++ is a widely-used, high-performance, statically-typed, multi-paradigm programming language that supports procedural, object-oriented, and generic programming. We will cover the essential syntax elements, accompanied by code examples, to help you understand and write effective C++ code.</p>
+<h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ol>
+<li>Introduction</li>
+<li>Basic Syntax<ol>
+<li>Comments</li>
+<li>Variables and Data Types</li>
+<li>Operators</li>
+<li>Control Structures</li>
+<li>Functions</li>
+</ol>
+</li>
+<li>Object-Oriented Programming<ol>
+<li>Classes and Objects</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+</ol>
+</li>
+<li>Templates</li>
+<li>Standard Library</li>
+<li>Conclusion</li>
+</ol>
+<p><a name="introduction"></a></p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>C++ is an extension of the C programming language, with additional features that support object-oriented and generic programming. Its syntax is similar to C, making it easier for developers familiar with C to transition to C++.</p>
+<p>C++ is widely used for system programming, game development, embedded systems, and high-performance computing due to its performance, expressiveness, and flexibility. This article aims to provide you with a comprehensive understanding of C++ syntax, which will serve as a solid foundation for mastering the language.</p>
+<p><a name="basic-syntax"></a></p>
+<h2 id="2-Basic-Syntax"><a href="#2-Basic-Syntax" class="headerlink" title="2. Basic Syntax"></a>2. Basic Syntax</h2><p><a name="comments"></a></p>
+<h3 id="2-1-Comments"><a href="#2-1-Comments" class="headerlink" title="2.1. Comments"></a>2.1. Comments</h3><p>Comments are used to provide explanations or annotations in the code. They are ignored by the compiler and do not affect program execution. C++ supports two types of comments: single-line comments and multi-line comments.</p>
+<p><strong>Single-line comments</strong> start with <code>//</code> and continue until the end of the line:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// This is a single-line comment.</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Multi-line comments</strong> start with <code>/*</code> and end with <code>*/</code>. They can span multiple lines:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">This is a</span></span><br><span class="line"><span class="comment">multi-line comment.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p><a name="variables-and-data-types"></a></p>
+<h3 id="2-2-Variables-and-Data-Types"><a href="#2-2-Variables-and-Data-Types" class="headerlink" title="2.2. Variables and Data Types"></a>2.2. Variables and Data Types</h3><p>C++ is a statically-typed language, which means that the data type of a variable must be specified at compile time. The basic built-in data types in C++ are:</p>
+<ul>
+<li><code>int</code>: integer numbers</li>
+<li><code>float</code>: floating-point numbers (single-precision)</li>
+<li><code>double</code>: floating-point numbers (double-precision)</li>
+<li><code>char</code>: characters</li>
+<li><code>bool</code>: boolean values (<code>true</code> or <code>false</code>)</li>
+</ul>
+<p>To declare a variable, specify its data type followed by the variable name:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> age;</span><br><span class="line"><span class="type">float</span> weight;</span><br><span class="line"><span class="type">double</span> balance;</span><br><span class="line"><span class="type">char</span> initial;</span><br><span class="line"><span class="type">bool</span> isActive;</span><br></pre></td></tr></table></figure>
+
+<p>You can also assign a value to a variable when declaring it:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">25</span>;</span><br><span class="line"><span class="type">float</span> weight = <span class="number">70.5</span>;</span><br><span class="line"><span class="type">double</span> balance = <span class="number">1000.0</span>;</span><br><span class="line"><span class="type">char</span> initial = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"><span class="type">bool</span> isActive = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<p><a name="operators"></a></p>
+<h3 id="2-3-Operators"><a href="#2-3-Operators" class="headerlink" title="2.3. Operators"></a>2.3. Operators</h3><p>C++ provides a variety of operators for performing operations on data, such as arithmetic, logical, relational, and bitwise operations. Some common operators are:</p>
+<ul>
+<li><p>Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></p>
+</li>
+<li><p>Logical operators: <code>&amp;&amp;</code> (and), <code>||</code> (or), <code>!</code> (not)</p>
+</li>
+<li><p>Relational operators: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></p>
+</li>
+<li><p>Bitwise operators: <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></p>
+</li>
+<li><p>Assignment operators: <code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&amp;=</code>, <code>|=</code>, <code>^=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code></p>
+</li>
+<li><p>Increment and decrement operators: <code>++</code>, <code>--</code></p>
+</li>
+<li><p>Other operators: <code>.</code> (member access), <code>-&gt;</code> (pointer member access), <code>[]</code> (array subscript), <code>()</code> (function call), <code>sizeof</code> (size of an object), <code>new</code> (dynamic memory allocation), <code>delete</code> (dynamic memory deallocation)</p>
+</li>
+</ul>
+<p>Here are some examples of using operators in C++:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> b = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> c = a + b;  <span class="comment">// Arithmetic operation</span></span><br><span class="line"><span class="type">bool</span> d = a &gt; b; <span class="comment">// Relational operation</span></span><br><span class="line"><span class="type">int</span> e = a &amp; b;  <span class="comment">// Bitwise operation</span></span><br><span class="line">a += <span class="number">2</span>;         <span class="comment">// Assignment operation</span></span><br><span class="line">a++;            <span class="comment">// Increment operation</span></span><br></pre></td></tr></table></figure>
+
+<p><a name="control-structures"></a></p>
+<h3 id="2-4-Control-Structures"><a href="#2-4-Control-Structures" class="headerlink" title="2.4. Control Structures"></a>2.4. Control Structures</h3><p>Control structures determine the flow of program execution. C++ provides several control structures, such as conditionals, loops, and jumps.</p>
+<p><strong>Conditionals</strong> are used to execute code based on a condition. The <code>if</code>, <code>else if</code>, and <code>else</code> statements are used for this purpose:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">18</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (age &lt; <span class="number">18</span>) &#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Underage&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (age &gt;= <span class="number">18</span> &amp;&amp; age &lt; <span class="number">65</span>) &#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Adult&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Senior&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Loops</strong> are used to execute a block of code repeatedly. C++ provides three types of loops: <code>for</code>, <code>while</code>, and <code>do-while</code>.</p>
+<ul>
+<li><code>for</code> loop:</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    std::cout &lt;&lt; i &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>while</code> loop:</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">5</span>) &#123;</span><br><span class="line">    std::cout &lt;&lt; i &lt;&lt; std::endl;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>do-while</code> loop:</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    std::cout &lt;&lt; i &lt;&lt; std::endl;</span><br><span class="line">    i++;</span><br><span class="line">&#125; <span class="keyword">while</span> (i &lt; <span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Jumps</strong> are used to transfer control to another part of the program. C++ provides four jump statements: <code>break</code>, <code>continue</code>, <code>goto</code>, and <code>return</code>.</p>
+<ul>
+<li><code>break</code>: Exits the current loop.</li>
+<li><code>continue</code>: Skips the remaining code in the current iteration and starts the next iteration of the loop.</li>
+<li><code>goto</code>: Transfers control to a labeled statement.</li>
+<li><code>return</code>: Exits the current function and returns a value (if specified).</li>
+</ul>
+<p><a name="functions"></a></p>
+<h3 id="2-5-Functions"><a href="#2-5-Functions" class="headerlink" title="2.5. Functions"></a>2.5. Functions</h3><p>Functions are blocks of code that perform a specific task and can be called by other parts of the program. Functions in C++ are defined using the following syntax:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function">return_type <span class="title">function_name</span><span class="params">(parameter_list)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Function body</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Here’s an example of a simple function that adds two numbers and returns their sum:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>To call a function, use the function name followed by its arguments enclosed in parentheses:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="built_in">add</span>(<span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;The sum is: &quot;</span> &lt;&lt; result &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a name="oop"></a></p>
+<h2 id="3-Object-Oriented-Programming"><a href="#3-Object-Oriented-Programming" class="headerlink" title="3. Object-Oriented Programming"></a>3. Object-Oriented Programming</h2><p>C++ supports object-oriented programming (OOP), which is a programming paradigm that uses objects, classes, and inheritance to design and implement software. In this section, we will discuss the essential concepts of OOP in C++.</p>
+<p><a name="classes-and-objects"></a></p>
+<h3 id="3-1-Classes-and-Objects"><a href="#3-1-Classes-and-Objects" class="headerlink" title="3.1. Classes and Objects"></a>3.1. Classes and Objects</h3><p><strong>Classes</strong> are user-defined data types that represent the blueprint for creating objects. They can have member variables (attributes) and member functions (methods). Classes are defined using the <code>class</code> keyword:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Car</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    std::string make;</span><br><span class="line">    std::string model;</span><br><span class="line">    <span class="type">int</span> year;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;The car has started.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">stop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;The car has stopped.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Objects</strong> are instances of classes. They are created using the class name followed by the object name:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Car myCar;</span><br></pre></td></tr></table></figure>
+
+<p>To access the member variables and member functions of an object, use the dot operator (<code>.</code>):</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">myCar.make = <span class="string">&quot;Toyota&quot;</span>;</span><br><span class="line">myCar.model = <span class="string">&quot;Camry&quot;</span>;</span><br><span class="line">myCar.year = <span class="number">2020</span>;</span><br><span class="line"></span><br><span class="line">myCar.<span class="built_in">start</span>();</span><br><span class="line">myCar.<span class="built_in">stop</span>();</span><br></pre></td></tr></table></figure>
+
+<p><a name="inheritance"></a></p>
+<h3 id="3-2-Inheritance"><a href="#3-2-Inheritance" class="headerlink" title="3.2. Inheritance"></a>3.2. Inheritance</h3><p>Inheritance is a mechanism that allows one class to inherit the properties and methods of another class. The class that is inherited from is called the <strong>base class</strong> or <strong>parent class</strong>, and the class that inherits is called the <strong>derived class</strong> or <strong>child class</strong>.</p>
+<p>In C++, inheritance is implemented using the <code>:</code> operator, followed by the access specifier (<code>public</code>, <code>protected</code>, or <code>private</code>) and the name of the base class:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ElectricCar</span> : <span class="keyword">public</span> Car &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">int</span> batteryCapacity;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">charge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;The electric car is charging.&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>In this example, the <code>ElectricCar</code> class inherits from the <code>Car</code> class. It has access to the <code>make</code>, <code>model</code>, <code>year</code>, <code>start()</code>, and <code>stop()</code> members of the <code>Car</code> class, as well as its own <code>batteryCapacity</code> member variable and <code>charge()</code> member function.</p>
+<p><a name="polymorphism"></a></p>
+<h3 id="3-3-Polymorphism"><a href="#3-3-Polymorphism" class="headerlink" title="3.3. Polymorphism"></a>3.3. Polymorphism</h3><p>Polymorphism is a feature of OOP that allows objects of different classes to be treated as objects of a common superclass. It enables a single function or operator to work with different data types or objects of different classes.</p>
+<p>In C++, polymorphism is achieved through virtual functions and function overloading.</p>
+<p><strong>Virtual functions</strong> allow a derived class to override a base class’s function. To declare a virtual function, use the <code>virtual</code> keyword in the base class:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">double</span> <span class="title">area</span><span class="params">()</span> </span>= <span class="number">0</span>; <span class="comment">// Pure virtual function</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Derived classes can then override the virtual function:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Rectangle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">double</span> width;</span><br><span class="line">    <span class="type">double</span> height;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> width * height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Circle</span> : <span class="keyword">public</span> Shape &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">double</span> radius;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">area</span><span class="params">()</span> <span class="keyword">override</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3.14159</span> * radius * radius;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Function overloading</strong> allows multiple functions with the same name but different parameter lists to be defined in a class. The correct function is chosen at compile time based on the number and types of arguments passed:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Calculator</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">float</span> <span class="title">add</span><span class="params">(<span class="type">float</span> a, <span class="type">float</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">double</span> <span class="title">add</span><span class="params">(<span class="type">double</span> a, <span class="type">double</span> b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>In this example, the <code>Calculator</code> class has three overloaded <code>add()</code> functions that work with different data types.</p>
+<p><a name="templates"></a></p>
+<h2 id="4-Templates"><a href="#4-Templates" class="headerlink" title="4. Templates"></a>4. Templates</h2><p>Templates are a feature of C++ that allows functions and classes to operate on generic data types. They enable code reusability and type safety.</p>
+<p>To define a function template, use the <code>template</code> keyword followed by a list of template parameters enclosed in angle brackets (<code>&lt;&gt;</code>). Template parameters are placeholders for data types:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">T <span class="title">add</span><span class="params">(T a, T b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>To use a function template, call the function with the required data type specified in angle brackets:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> intSum = <span class="built_in">add</span>&lt;<span class="type">int</span>&gt;(<span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">    <span class="type">double</span> doubleSum = <span class="built_in">add</span>&lt;<span class="type">double</span>&gt;(<span class="number">3.5</span>, <span class="number">4.5</span>);</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;intSum: &quot;</span> &lt;&lt; intSum &lt;&lt; std::endl;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;doubleSum: &quot;</span> &lt;&lt; doubleSum &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>To define a class template, use the <code>template</code> keyword followed by a list of template parameters enclosed in angle brackets, and then the class definition:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Stack</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::vector&lt;T&gt; elements;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">push</span><span class="params">(<span class="type">const</span> T&amp; element)</span> </span>&#123;</span><br><span class="line">        elements.<span class="built_in">push_back</span>(element);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">T <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        T topElement = elements.<span class="built_in">back</span>();</span><br><span class="line">        elements.<span class="built_in">pop_back</span>();</span><br><span class="line">        <span class="keyword">return</span> topElement;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">isEmpty</span><span class="params">()</span> <span class="type">const</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> elements.<span class="built_in">empty</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>To create an instance of a class template, specify the required data type in angle brackets:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Stack&lt;<span class="type">int</span>&gt; intStack;</span><br><span class="line">Stack&lt;std::string&gt; stringStack;</span><br></pre></td></tr></table></figure>
+
+<p><a name="standard-library"></a></p>
+<h2 id="5-Standard-Library"><a href="#5-Standard-Library" class="headerlink" title="5. Standard Library"></a>5. Standard Library</h2><p>The C++ Standard Library provides a rich collection of functions, classes, and algorithms for various programming tasks. Some of the most commonly used components of the Standard Library are:</p>
+<ul>
+<li><code>&lt;iostream&gt;</code>: Input&#x2F;output stream objects, such as <code>std::cin</code>, <code>std::cout</code>, and <code>std::endl</code></li>
+<li><code>&lt;string&gt;</code>: The <code>std::string</code> class for working with strings</li>
+<li><code>&lt;vector&gt;</code>: The <code>std::vector</code> class for working with dynamic arrays</li>
+<li><code>&lt;list&gt;</code>: The <code>std::list</code> class for working with doubly-linked lists</li>
+<li><code>&lt;map&gt;</code>: The <code>std::map</code> class for working with key-value pairs</li>
+<li><code>&lt;algorithm&gt;</code>: A collection of generic algorithms for sorting, searching, and transforming data</li>
+<li><code>&lt;memory&gt;</code>: Smart pointers and memory management utilities</li>
+</ul>
+<p>To use a component from the Standard Library, include the corresponding header file and use the <code>std</code> namespace:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; numbers = &#123;<span class="number">5</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">    std::<span class="built_in">sort</span>(numbers.<span class="built_in">begin</span>(), numbers.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> number : numbers) &#123;</span><br><span class="line">        std::cout &lt;&lt; number &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a name="conclusion"></a></p>
+<h2 id="6-Conclusion"><a href="#6-Conclusion" class="headerlink" title="6. Conclusion"></a>6. Conclusion</h2><p>In this comprehensive guide, we’ve covered the essential elements of C++ syntax, ranging from basic elements such as comments, variables, and data types, to advanced concepts like object-oriented programming, templates, and the Standard Library. The examples provided will help you better understand how to write effective C++ code.</p>
+<p>As you continue to learn and explore C++, remember that practice is key to mastering the language. Building small projects, solving programming challenges, and studying existing codebases will help you gain a deeper understanding of C++ and its features.</p>
+<p>With a solid foundation in C++ syntax, you’re now ready to dive deeper into the language and explore its more advanced features, such as multithreading, exception handling, and metaprogramming. Happy coding!</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Ryan Zhao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/04/10/The%20Syntax%20of%20C++/">http://example.com/2023/04/10/The%20Syntax%20of%20C++/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/avatar.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/04/10/Advanced%20STL%20Usage%20in%20C++/" title="Advanced STL Usage in C++"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Advanced STL Usage in C++</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.JPG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ryan Zhao</div><div class="author-info__description">CS for everything</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ryanzhao1226"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ryanzhao1226" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/ryan_zhao1226" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.facebook.com/ryan.zhao.5496?mibextid=LQQJ4dhttps://www.facebook.com/ryan.zhao.5496?mibextid=LQQJ4d" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a><a class="social-icon" href="mailto:ryanzhao1226@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Welcome to Ryan's blog! If you have any question, please contant me by E-mail!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Syntax-in-C"><span class="toc-number">1.</span> <span class="toc-text">The Syntax in C++</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Table-of-Contents"><span class="toc-number">1.1.</span> <span class="toc-text">Table of Contents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-number">1.2.</span> <span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Basic-Syntax"><span class="toc-number">1.3.</span> <span class="toc-text">2. Basic Syntax</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Comments"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1. Comments</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Variables-and-Data-Types"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2. Variables and Data Types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Operators"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3. Operators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-Control-Structures"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.4. Control Structures</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-Functions"><span class="toc-number">1.3.5.</span> <span class="toc-text">2.5. Functions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Object-Oriented-Programming"><span class="toc-number">1.4.</span> <span class="toc-text">3. Object-Oriented Programming</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Classes-and-Objects"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1. Classes and Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Inheritance"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2. Inheritance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Polymorphism"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.3. Polymorphism</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Templates"><span class="toc-number">1.5.</span> <span class="toc-text">4. Templates</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Standard-Library"><span class="toc-number">1.6.</span> <span class="toc-text">5. Standard Library</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Conclusion"><span class="toc-number">1.7.</span> <span class="toc-text">6. Conclusion</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/10/The%20Syntax%20of%20C++/" title="The Syntax in C++">The Syntax in C++</a><time datetime="2023-04-10T12:36:54.548Z" title="Created 2023-04-10 20:36:54">2023-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/10/Advanced%20STL%20Usage%20in%20C++/" title="Advanced STL Usage in C++">Advanced STL Usage in C++</a><time datetime="2023-04-10T12:35:55.627Z" title="Created 2023-04-10 20:35:55">2023-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/10/Multithreading%20in%20C++/" title="Multithreading in C++">Multithreading in C++</a><time datetime="2023-04-10T12:34:59.752Z" title="Created 2023-04-10 20:34:59">2023-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/10/File%20IO%20in%20C++/" title="File I/O in C++">File I/O in C++</a><time datetime="2023-04-10T12:34:10.236Z" title="Created 2023-04-10 20:34:10">2023-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/10/Exception%20Handling%20in%20C++/" title="Exception Handling in C++">Exception Handling in C++</a><time datetime="2023-04-10T12:32:54.030Z" title="Created 2023-04-10 20:32:54">2023-04-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Ryan Zhao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></body></html>
